@@ -11,10 +11,10 @@ st.title("📊 Dashboard Saham")
 st.markdown("Gunakan visualisasi interaktif dengan PyGWalker")
 
 # Load data
-df = pd.read_csv("./Cleaned/cleaned_saham_data.csv")
+df = pd.read_csv("cleaned_saham_data.csv")
 
 # Konversi pygwalker jadi HTML
-html = pyg.to_html(df, spec="./dashboard/dashboard_final.json")
+html = pyg.to_html(df, spec="dashboard_final.json")
 
 # Tampilkan dalam Streamlit sebagai komponen HTML
 components.html(html, height=1000, scrolling=True)
